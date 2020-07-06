@@ -44,3 +44,4 @@ console.log(`Password generator listening on ${port}`);
 
 //twilio endpoint
 app.post('/api/send', tc.send)
+app.post('/api/test', tc.test)
