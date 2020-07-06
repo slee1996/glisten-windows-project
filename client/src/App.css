@@ -1,38 +1,242 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#logo {
+  height: 20vh;
+  width: 20vh;
+  max-width: 30vh;
+  max-height: 30vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#logo-box {
+  min-height: 20vh;
+  min-width: 20vh;
+  max-width: 30vh;
+  max-height: 30vh;
+  border: 0px solid black;
+  border-radius: 200px 200px;
+  background-color: rgba(0, 0, 0); 
+  margin: 10px 10px;
+  float: left;
+  top: 0;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#nav {
+  background-color: rgba(128, 128, 128, 0.4);
+  height: 5vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  font-size: calc(8px + 2vmin);
   color: white;
+  position: fixed;
+  top: 0;
+  font-weight: 200;
+  letter-spacing: 1px;
+  font-family: Helvetica, sans-serif;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#link {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#title {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: calc(15px + 2vmin);
+  
+} 
+
+#link:hover {
+  text-decoration: underline;
+}
+
+#title:hover {
+  text-decoration: underline;
+}
+
+#nav-box-1 {
+  max-width: 30vw;
+  min-width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 0px solid black;
+}
+
+#small-script {
+  font-size: 100%;
+  font-style: italic;
+  font-weight: 300;
+  width: 80vw;
+}
+
+#motto {
+  font-style: italic;
+  font-weight: 400;
+}
+
+#motto-box {
+  min-height: 45vh;
+  width: 100%;
+  padding: 1px;
+  border: 0px solid black;
+  background-image: url(https://wallpapersmug.com/download/3840x2400/ba8e68/clean-lake-mountains-range-trees-nature-4k.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+#main {
+  display: flex;
+  min-height: 100vh;
+  max-height: 200vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+#body {
+  width: 80vw;
+  border: 0px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+#body-box {
+  min-height: 30vh;
+  width: 80vw;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#image-box {
+  width: 50vw;
+  height: 40vh;
+  border: 0px solid black;
+  background-image: url(https://wearepatriotwindows.com/wp-content/uploads/2018/08/serim1.png); 
+  background-size: cover;
+  display: none;
+}
+
+#contact {
+  font-weight: 300;
+  height: 59vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+#contact H1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+#contact H2 {
+  font-weight: 300;
+  margin: 2px;
+}
+
+#text-box H2 {
+  font-weight: 300;
+  
+  max-height: 10vh;
+  border: 0px solid black;
+  box-sizing: border-box;
+}
+
+#paragraph {
+  font-weight: 300;
+  max-height: 30vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 0px solid black;
+  box-sizing: border-box;
+}
+
+#hours {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#hours H2 {
+  font-weight: 300;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hours P {
+  font-weight: 300;
+}
+
+#text-box P {
+  font-weight: 300;
+}
+
+#estimates {
+  font-weight: 300;
+  max-height: 30vh;
+  max-width: 80vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 0px solid black;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+#text-box H2 {
+  font-weight: 300;
+}
+
+#icon {
+  border: 0px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.562);
+  font-weight: 400;
+  margin: 1px;
+}
+
+button {
+  width: 100px;
+  margin: 10px;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

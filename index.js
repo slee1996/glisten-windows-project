@@ -6,12 +6,14 @@ const generatePassword = require('password-generator');
 const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const tc = require('./twilioController')
+const cors = require('cors')
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(pino);
+app.use(cors())
 
 //Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
