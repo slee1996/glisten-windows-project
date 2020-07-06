@@ -131,6 +131,10 @@
   flex-wrap: wrap;
 }
 
+#text-box {
+  width: 80vw;
+}
+
 #image-box {
   width: 50vw;
   height: 40vh;

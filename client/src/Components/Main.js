@@ -5,7 +5,7 @@ const Main = () => {
         <div id='main'>
             <div id='motto-box'
                 style= {{
-                    backgroundImage: 'url(https://wallpapersmug.com/download/3840x2400/ba8e68/clean-lake-mountains-range-trees-nature-4k.jpg)'
+                    backgroundImage: 'url(https://glisten-windows-cleaning.s3.us-east-2.amazonaws.com/background-photos/lake-background.jpg)'
                 }}
             >
                 {/* <h1 id='motto'>Make Those Windows Glisten</h1>
