@@ -3,7 +3,11 @@ import React from 'react'
 const Main = () => {
     return(
         <div id='main'>
-            <div id='motto-box'>
+            <div id='motto-box'
+                style= {{
+                    backgroundImage: 'url(https://wallpapersmug.com/download/3840x2400/ba8e68/clean-lake-mountains-range-trees-nature-4k.jpg)'
+                }}
+            >
                 {/* <h1 id='motto'>Make Those Windows Glisten</h1>
                 <p>
                     Founded in 2020, and serving Utah County, Glisten Window Cleaning is at the forefront of window cleaning technology. Our technicians use a deionized water cleaning system that is guaranteed not to leave streaks or spots, and will leave your windows clean and clear for much longer than windows cleaned with squeegees and soap. 

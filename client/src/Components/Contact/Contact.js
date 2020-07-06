@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const Contact = () => {
@@ -6,14 +6,22 @@ const Contact = () => {
     const [name, setName] = useState('')
     const [phoneNum, setPhoneNum] = useState('')
     const [address, setAddress] = useState('')
+    const [sent, setSent] = useState(false)
 
     const submit = () => {
         const message = `Name: ${name}, Number: ${phoneNum}, Address: ${address}`
-        
+
         axios.post('/api/send', { body: message })
             .then(res => console.log(res.data))
+            .then( setName(''), setPhoneNum(''), setAddress(''), setSent(true) )
             .catch(err => console.log(err))
     }
+
+    useEffect(() => {
+        if(sent){
+            alert('Message Sent!')
+        }
+    }, [sent])
 
     const onSubmit = () => {
         const message = {
@@ -35,7 +43,11 @@ const Contact = () => {
 
     return(
         <>
-        <div id='motto-box'>
+        <div id='motto-box' 
+            style= {{
+                backgroundImage: 'url(https://wallpapersmug.com/download/3840x2400/ba8e68/clean-lake-mountains-range-trees-nature-4k.jpg)'
+            }}
+        >
         </div>
         <div id='contact'>
             <form id='contact-form' > 
