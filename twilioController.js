@@ -6,12 +6,12 @@ const client = require('twilio')(accountSid, authToken);
 module.exports = {
     send: async(req, res) => { //currently unused, will switch over to this controller once I've figured out how to format the front end the way I'd like it
         res.header('Content-Type', 'application/json');
-        const {messageBody} = req.body
+        const {messageBody} = req.body.messageBody
         client.messages
             .create({
                 from: process.env.TWILIO_PHONE_NUMBER,
                 to: process.env.COMPANY_PHONE_NUMBER,
-                body: "hello there"
+                body: messageBody
             })
             .then(() => {
                 res.send(JSON.stringify({ success: true }));
@@ -36,7 +36,13 @@ module.exports = {
                 from: process.env.TWILIO_PHONE_NUMBER,
                 to: process.env.COMPANY_PHONE_NUMBER
             })
-            .then(message => console.log(message.sid));
-            res.status(200).send("successful")
+            .then(() => {
+                res.send(JSON.stringify({ success: true }));
+            })
+            .catch(err => {
+                console.log(err);
+                res.send(JSON.stringify({ success: false }));
+            }
+        )
     }
 }
