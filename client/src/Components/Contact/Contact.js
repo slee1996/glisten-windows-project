@@ -11,7 +11,7 @@ const Contact = () => {
     const submit = () => {
         const message = `Name: ${name}, Number: ${phoneNum}, Address: ${address}`
 
-        axios.post('/api/send', { body: message })
+        axios.post('http://localhost:4000/api/send', { body: message })
             .then(res => console.log(res.data))
             .then( setName(''), setPhoneNum(''), setAddress(''), setSent(true) )
             .catch(err => console.log(err))

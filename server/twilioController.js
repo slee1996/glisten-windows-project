@@ -4,7 +4,7 @@ const authToken = TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 module.exports = {
-    send: async(req, res) => { //currently unused, will switch over to this controller once I've figured out how to format the front end the way I'd like it
+    send: async(req, res) => { //actual twilio controller for sending sms
         res.header('Content-Type', 'application/json');
         
         client.messages
@@ -23,7 +23,7 @@ module.exports = {
         );
     },
 
-    test: async(req, res) => { //currently unused, will switch over to this controller once I've figured out how to format the front end the way I'd like it
+    test: async(req, res) => { //just for testing the twilio connection
         res.header('Content-Type', 'application/json');
         
         client.messages
